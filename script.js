@@ -10,18 +10,24 @@ function openAuthModal() {
 }
 
 function switchTab(tab) {
+  const loginBox = document.getElementById("loginBox");
+  const signupBox = document.getElementById("signupBox");
+
   if (tab === 'login') {
-    loginForm.classList.remove("hidden");
-    signupForm.classList.add("hidden");
+    loginBox.classList.remove("hidden");
+    signupBox.classList.add("hidden");
+
     loginTab.classList.add("active");
     signupTab.classList.remove("active");
   } else {
-    loginForm.classList.add("hidden");
-    signupForm.classList.remove("hidden");
+    loginBox.classList.add("hidden");
+    signupBox.classList.remove("hidden");
+
     loginTab.classList.remove("active");
     signupTab.classList.add("active");
   }
 }
+
 
 window.onclick = (e) => {
   if (e.target === modal) {
