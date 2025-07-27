@@ -1,3 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #e0f2ff, #ede9f8);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 25%;
+  background-color: #0f172a;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.logo span {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.new-chat {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.search-box {
+  width: 100%;
+  padding: 10px;
+  background-color: #1e293b;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.history {
+  font-size: 14px;
+  color: #cbd5e1;
+}
+
+.history-date {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.history-item {
+  margin-top: 5px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.history-item:hover {
+  color: white;
+}
+
+.upgrade-box {
+  margin-top: 30px;
+  border-top: 1px solid #334155;
+  padding-top: 20px;
+}
+
+.upgrade-title {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.upgrade-sub {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* Main Section */
+.main {
+  width: 75%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.welcome-box {
+  text-align: center;
+}
+
+.bot-icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.welcome-box h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+.subtext {
+  color: #64748b;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 280px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+.card p {
+  font-size: 14px;
+  color: #475569;
+}
+
+/* Input Section */
+.input-section {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #cbd5e1;
+  padding-top: 20px;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.send-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  margin-left: 10px;
+  cursor: pointer;
+  color: #3b82f6;
+}
+
 .auth-button {
   position: absolute;
   top: 20px;
