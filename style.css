@@ -219,12 +219,24 @@ body {
 }
 
 .auth-slider-container {
-  background: white;
   width: 400px;
-  border-radius: 16px;
-  padding: 30px;
   overflow: hidden;
   position: relative;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.form-slider {
+  display: flex;
+  width: 800px; /* 400 + 400 for two panels */
+  transition: transform 0.4s ease-in-out;
+}
+
+.form-panel {
+  width: 400px;
+  padding: 10px;
+  flex-shrink: 0;
 }
 
 .slider-tabs {
@@ -249,17 +261,6 @@ body {
   color: white;
 }
 
-.form-slider {
-  display: flex;
-  width: 800px; /* 2 forms of 400px width */
-  transition: transform 0.4s ease-in-out;
-}
-
-.form-panel {
-  width: 400px;
-  padding: 10px;
-  flex-shrink: 0;
-}
 
 .form-panel h2 {
   text-align: center;
