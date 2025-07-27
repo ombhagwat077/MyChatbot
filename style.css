@@ -1,3 +1,10 @@
+/* Original CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to right, #e0f2ff, #ede9f8);
@@ -99,6 +106,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 
 .welcome-box {
@@ -178,6 +186,8 @@ body {
   cursor: pointer;
   color: #3b82f6;
 }
+
+/* AUTH MODAL */
 .auth-button {
   position: absolute;
   top: 20px;
@@ -193,7 +203,6 @@ body {
   cursor: pointer;
 }
 
-/* MODAL */
 .auth-modal {
   position: fixed;
   inset: 0;
@@ -293,4 +302,3 @@ form input {
   font-size: 12px;
   text-align: center;
 }
-
