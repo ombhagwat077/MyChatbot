@@ -1,10 +1,8 @@
-// Open the login/signup modal
 function openAuthModal() {
   document.getElementById("authModal").classList.remove("hidden");
-  switchTabSlide("login"); // Default to login
+  switchTabSlide("login");
 }
 
-// Function to switch between login and signup panels using sliding effect
 function switchTabSlide(tab) {
   const slider = document.getElementById("formSlider");
   const loginTab = document.getElementById("loginTab");
@@ -21,10 +19,10 @@ function switchTabSlide(tab) {
   }
 }
 
-// Close modal when clicking outside the modal container
 window.onclick = (e) => {
   const modal = document.getElementById("authModal");
   if (e.target === modal) {
     modal.classList.add("hidden");
   }
 };
+
