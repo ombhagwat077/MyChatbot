@@ -1,4 +1,4 @@
-/* Original CSS */
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
@@ -187,7 +187,7 @@ body {
   color: #3b82f6;
 }
 
-
+/* ============ AUTH MODAL ============ */
 .auth-button {
   position: absolute;
   top: 20px;
@@ -207,44 +207,64 @@ body {
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(3px);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   z-index: 999;
+  backdrop-filter: blur(4px);
 }
 
 .auth-modal.hidden {
   display: none;
 }
 
-.auth-container {
+.auth-slider-container {
   background: white;
+  width: 400px;
   border-radius: 16px;
   padding: 30px;
-  width: 350px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
 }
 
-.auth-tabs {
+.slider-tabs {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
 
-.auth-tabs button {
-  width: 48%;
+.slider-tabs button {
+  flex: 1;
   padding: 10px;
-  border: none;
-  border-radius: 10px;
   background: #e5e7eb;
+  border: none;
+  border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.auth-tabs .active {
+.slider-tabs .active {
   background: #1e40af;
   color: white;
+}
+
+.form-slider {
+  display: flex;
+  width: 800px; /* 2 forms of 400px width */
+  transition: transform 0.4s ease-in-out;
+}
+
+.form-panel {
+  width: 400px;
+  padding: 10px;
+  flex-shrink: 0;
+}
+
+.form-panel h2 {
+  text-align: center;
+  color: #1e293b;
+  margin-bottom: 20px;
 }
 
 form {
@@ -255,37 +275,31 @@ form {
 
 form input {
   padding: 10px;
-  border: 1px solid #d1d5db;
   border-radius: 8px;
+  border: 1px solid #d1d5db;
   font-size: 14px;
 }
 
-.pass-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.pass-row a {
-  font-size: 12px;
-  text-decoration: none;
-  color: #3b82f6;
-}
-
 .form-btn {
+  padding: 10px;
   background: linear-gradient(to right, #111827, #374151);
   color: white;
-  padding: 10px;
-  border-radius: 8px;
   border: none;
+  border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
+}
+
+.switch-text {
+  font-size: 12px;
+  text-align: center;
 }
 
 .or {
   text-align: center;
   font-size: 12px;
   color: #6b7280;
+  margin: 10px 0;
 }
 
 .socials button {
@@ -297,24 +311,3 @@ form input {
   font-size: 14px;
   cursor: pointer;
 }
-
-.switch-text {
-  font-size: 12px;
-  text-align: center;
-}
-.auth-box {
-  border: 1px solid #e5e7eb;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  background-color: #ffffff;
-  transition: all 0.3s ease;
-}
-
-.auth-box h2 {
-  font-size: 22px;
-  margin-bottom: 15px;
-  color: #1e293b;
-  text-align: center;
-}
-
