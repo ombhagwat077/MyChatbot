@@ -75,14 +75,17 @@
   </div>
 
   <!-- Login/Signup Modal -->
-  <div id="authModal" class="auth-modal hidden">
-    <div class="auth-container">
-      <div class="auth-tabs">
-        <button id="loginTab" class="active" onclick="switchTab('login')">Login</button>
-        <button id="signupTab" onclick="switchTab('signup')">Sign Up</button>
-      </div>
+  <!-- Login/Signup Modal -->
+<div id="authModal" class="auth-modal hidden">
+  <div class="auth-container">
+    <div class="auth-tabs">
+      <button id="loginTab" class="active" onclick="switchTab('login')">Login</button>
+      <button id="signupTab" onclick="switchTab('signup')">Sign Up</button>
+    </div>
 
-      <!-- Login Form -->
+    <!-- Sign In Box -->
+    <div id="loginBox" class="auth-box">
+      <h2>Sign In</h2>
       <form id="loginForm">
         <input type="email" placeholder="Email address" required>
         <div class="pass-row">
@@ -99,9 +102,12 @@
         </div>
         <p class="switch-text">Don’t have an account yet? <a href="#" onclick="switchTab('signup')">Sign up</a></p>
       </form>
+    </div>
 
-      <!-- Signup Form -->
-      <form id="signupForm" class="hidden">
+    <!-- Sign Up Box -->
+    <div id="signupBox" class="auth-box hidden">
+      <h2>Sign Up</h2>
+      <form id="signupForm">
         <input type="text" placeholder="Full Name" required>
         <input type="email" placeholder="Email address" required>
         <input type="password" placeholder="Password" required>
@@ -110,6 +116,7 @@
       </form>
     </div>
   </div>
+</div>
 
   <script src="script.js"></script>
 </body>
