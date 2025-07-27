@@ -1,3 +1,8 @@
+function openAuthModal() {
+  document.getElementById("authModal").classList.remove("hidden");
+  switchTabSlide("login");
+}
+
 function switchTabSlide(tab) {
   const slider = document.getElementById("formSlider");
   const loginTab = document.getElementById("loginTab");
@@ -8,10 +13,16 @@ function switchTabSlide(tab) {
     signupTab.classList.add("active");
     loginTab.classList.remove("active");
   } else {
-    slider.style.transform = "translateX(0px)";
+    slider.style.transform = "translateX(0)";
     loginTab.classList.add("active");
     signupTab.classList.remove("active");
   }
 }
 
+window.onclick = (e) => {
+  const modal = document.getElementById("authModal");
+  if (e.target === modal) {
+    modal.classList.add("hidden");
+  }
+};
 
