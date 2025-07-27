@@ -4,79 +4,77 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Student Guide Chatbot</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-
     <!-- Sidebar -->
     <div class="sidebar">
       <div class="logo">Chatbot <span>by Esthraa</span></div>
       <button class="new-chat">+ New Chat</button>
       <input type="text" placeholder="Search history" class="search-box" />
-
       <div class="history">
         <p class="history-date">Today</p>
         <p class="history-item">Write about seven world wonders...</p>
-
-        <p class="history-date">12<sup>th</sup> June, 2023</p>
-        <p class="history-item">What is the best way to manage...</p>
-        <p class="history-item">Tell me an easy recipe to make...</p>
-        <p class="history-item">Best places to visit on earth after...</p>
-
-        <p class="history-date">24<sup>th</sup> April, 2023</p>
-        <p class="history-item">Best feature of Android...</p>
-        <p class="history-item">Hex code of different shades of blue...</p>
-
-        <p class="history-date">15<sup>th</sup> March, 2023</p>
-        <p class="history-item">Makeup tips for eye shadow...</p>
-        <p class="history-item">Best eye shades to use on...</p>
       </div>
-
       <div class="upgrade-box">
         <p class="upgrade-title">Upgrade Premium</p>
         <p class="upgrade-sub">Better speed, more research</p>
       </div>
     </div>
 
-    <!-- Main Chat Area -->
+    <!-- Main -->
     <div class="main">
-       <!-- Top Right Buttons -->
       <div class="auth-buttons">
-      <a href="login.html" class="btn-login">Sign In</a>
-      <a href="signup.html" class="btn-signup">Sign Up</a>
+        <button onclick="showModal('login')">Sign In</button>
+        <button onclick="showModal('signup')">Sign Up</button>
       </div>
+
       <div class="welcome-box">
         <div class="bot-icon">🤖</div>
         <h1>Welcome to the Chatbot</h1>
         <p class="subtext">Your Personal AI Companion</p>
-
-        <div class="cards">
-          <div class="card">
-            <h3>🔍 Explore various subjects</h3>
-            <p>"Can you provide an overview of the latest advancements in artificial intelligence?"</p>
-          </div>
-          <div class="card">
-            <h3>🕒 Find your answers</h3>
-            <p>"What are some effective strategies for improving productivity and time management?"</p>
-          </div>
-          <div class="card">
-            <h3>👤 Choose your preference</h3>
-            <p>"How can I enhance my skills in office management department?"</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Input Section -->
-      <div class="input-section">
-        <input type="text" placeholder="Ask me anything..." />
-        <button class="send-btn">📤</button>
       </div>
     </div>
   </div>
+
+  <!-- Auth Modal -->
+  <div id="authModal" class="modal hidden">
+    <div class="modal-content">
+      <div class="tabs">
+        <button id="loginTab" class="tab active" onclick="switchTab('login')">🔐 Login</button>
+        <button id="signupTab" class="tab" onclick="switchTab('signup')">📝 Sign Up</button>
+      </div>
+
+      <form id="loginForm">
+        <input type="email" placeholder="Enter your email address" required />
+        <div class="pass-row">
+          <input type="password" placeholder="Enter your password" required />
+          <a href="#">Forgot password?</a>
+        </div>
+        <button type="submit" class="form-btn">Log In</button>
+
+        <div class="or">or</div>
+        <div class="social-btns">
+          <button>G Continue with Google</button>
+          <button> Continue with Apple</button>
+          <button>◇ Continue with Binance</button>
+          <button>💳 Continue with Wallet</button>
+        </div>
+        <p class="switch-text">Don't have an account yet? <a href="#" onclick="switchTab('signup')">Sign up</a></p>
+      </form>
+
+      <form id="signupForm" class="hidden">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="password" placeholder="Create Password" required />
+        <button type="submit" class="form-btn">Sign Up</button>
+        <p class="switch-text">Already have an account? <a href="#" onclick="switchTab('login')">Login</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
 
-
-</body>
-</html>
