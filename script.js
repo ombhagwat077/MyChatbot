@@ -23,9 +23,9 @@ function switchTab(tab) {
   }
 }
 
-// Optional: click outside to close
 window.onclick = (e) => {
   if (e.target === modal) {
     modal.classList.add("hidden");
   }
 };
+
