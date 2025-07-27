@@ -76,47 +76,43 @@
 
   <!-- Login/Signup Modal -->
   <!-- Login/Signup Modal -->
+<!-- LOGIN/SIGNUP SLIDER MODAL -->
 <div id="authModal" class="auth-modal hidden">
-  <div class="auth-container">
-    <div class="auth-tabs">
-      <button id="loginTab" class="active" onclick="switchTab('login')">Login</button>
-      <button id="signupTab" onclick="switchTab('signup')">Sign Up</button>
+  <div class="auth-slider-container">
+    <!-- Tabs -->
+    <div class="slider-tabs">
+      <button id="loginTab" class="active" onclick="switchTabSlide('login')">Login</button>
+      <button id="signupTab" onclick="switchTabSlide('signup')">Sign Up</button>
     </div>
 
-    <!-- Sign In Box -->
-    <div id="loginBox" class="auth-box">
-      <h2>Sign In</h2>
-      <form id="loginForm">
-        <input type="email" placeholder="Email address" required>
-        <div class="pass-row">
+    <!-- Sliding Panels -->
+    <div class="form-slider" id="formSlider">
+      <!-- LOGIN FORM -->
+      <div class="form-panel">
+        <h2>Login</h2>
+        <form id="loginForm">
+          <input type="email" placeholder="Email address" required>
           <input type="password" placeholder="Password" required>
-          <a href="#">Forgot password?</a>
-        </div>
-        <button class="form-btn">Log In</button>
-        <div class="or">or</div>
-        <div class="socials">
-          <button>G Continue with Google</button>
-          <button> Continue with Apple</button>
-          <button>◇ Continue with Binance</button>
-          <button>💳 Continue with Wallet</button>
-        </div>
-        <p class="switch-text">Don’t have an account yet? <a href="#" onclick="switchTab('signup')">Sign up</a></p>
-      </form>
-    </div>
+          <button class="form-btn">Login</button>
+          <p class="switch-text">Don't have an account? <a href="#" onclick="switchTabSlide('signup')">Sign Up</a></p>
+        </form>
+      </div>
 
-    <!-- Sign Up Box -->
-    <div id="signupBox" class="auth-box hidden">
-      <h2>Sign Up</h2>
-      <form id="signupForm">
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email address" required>
-        <input type="password" placeholder="Password" required>
-        <button class="form-btn">Sign Up</button>
-        <p class="switch-text">Already have an account? <a href="#" onclick="switchTab('login')">Log in</a></p>
-      </form>
+      <!-- SIGNUP FORM -->
+      <div class="form-panel">
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+          <input type="text" placeholder="Full Name" required>
+          <input type="email" placeholder="Email address" required>
+          <input type="password" placeholder="Password" required>
+          <button class="form-btn">Sign Up</button>
+          <p class="switch-text">Already have an account? <a href="#" onclick="switchTabSlide('login')">Login</a></p>
+        </form>
+      </div>
     </div>
   </div>
 </div>
+
 
   <script src="script.js"></script>
 </body>
