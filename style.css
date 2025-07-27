@@ -302,3 +302,19 @@ form input {
   font-size: 12px;
   text-align: center;
 }
+.auth-box {
+  border: 1px solid #e5e7eb;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.auth-box h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #1e293b;
+  text-align: center;
+}
+
