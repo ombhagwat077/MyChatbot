@@ -10,7 +10,6 @@
   <div class="container">
 
     <!-- Sidebar -->
-    <!-- Sidebar -->
     <div class="sidebar">
       <div class="logo">Chatbot <span>by Esthraa</span></div>
       <button class="new-chat">+ New Chat</button>
@@ -40,13 +39,8 @@
       </div>
     </div>
 
-    <!-- Main Area -->
+    <!-- Main Chat Area -->
     <div class="main">
-      <!-- AUTH BUTTON -->
-      <div class="auth-button">
-        <button onclick="openAuthModal()">Login / Signup</button>
-      </div>
-
       <div class="welcome-box">
         <div class="bot-icon">🤖</div>
         <h1>Welcome to the Chatbot</h1>
@@ -67,51 +61,14 @@
           </div>
         </div>
       </div>
+
+      <!-- Input Section -->
       <div class="input-section">
         <input type="text" placeholder="Ask me anything..." />
         <button class="send-btn">📤</button>
       </div>
     </div>
   </div>
-
-  <!-- LOGIN/SIGNUP MODAL -->
-  <div id="authModal" class="auth-modal hidden">
-    <div class="auth-container">
-      <div class="auth-tabs">
-        <button id="loginTab" class="active" onclick="switchTab('login')">Login</button>
-        <button id="signupTab" onclick="switchTab('signup')">Sign Up</button>
-      </div>
-
-      <!-- LOGIN FORM -->
-      <form id="loginForm">
-        <input type="email" placeholder="Email address" required>
-        <div class="pass-row">
-          <input type="password" placeholder="Password" required>
-          <a href="#">Forgot password?</a>
-        </div>
-        <button class="form-btn">Log In</button>
-        <div class="or">or</div>
-        <div class="socials">
-          <button>G Continue with Google</button>
-          <button> Continue with Apple</button>
-          <button>◇ Continue with Binance</button>
-          <button>💳 Continue with Wallet</button>
-        </div>
-        <p class="switch-text">Don’t have an account yet? <a href="#" onclick="switchTab('signup')">Sign up</a></p>
-      </form>
-
-      <!-- SIGNUP FORM -->
-      <form id="signupForm" class="hidden">
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email address" required>
-        <input type="password" placeholder="Password" required>
-        <button class="form-btn">Sign Up</button>
-        <p class="switch-text">Already have an account? <a href="#" onclick="switchTab('login')">Log in</a></p>
-      </form>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
 
