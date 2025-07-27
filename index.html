@@ -11,25 +11,21 @@
 
     <!-- Sidebar -->
     <div class="sidebar">
-      <div class="logo">Chatbot <span>by Meee</span></div>
+      <div class="logo">Chatbot <span>by Esthraa</span></div>
       <button class="new-chat">+ New Chat</button>
       <input type="text" placeholder="Search history" class="search-box" />
+
       <div class="history">
         <p class="history-date">Today</p>
         <p class="history-item">Write about seven world wonders...</p>
-
         <p class="history-date">12<sup>th</sup> June, 2023</p>
         <p class="history-item">What is the best way to manage...</p>
         <p class="history-item">Tell me an easy recipe to make...</p>
-        <p class="history-item">Best places to visit on earth after...</p>
-
         <p class="history-date">24<sup>th</sup> April, 2023</p>
         <p class="history-item">Best feature of Android...</p>
         <p class="history-item">Hex code of different shades of blue...</p>
-
         <p class="history-date">15<sup>th</sup> March, 2023</p>
         <p class="history-item">Makeup tips for eye shadow...</p>
-        <p class="history-item">Best eye shades to use on...</p>
       </div>
 
       <div class="upgrade-box">
@@ -40,7 +36,6 @@
 
     <!-- Main Chat Area -->
     <div class="main">
-      <!-- Login/Signup Button -->
       <div class="auth-button">
         <button onclick="openAuthModal()">Login / Signup</button>
       </div>
@@ -75,46 +70,44 @@
   </div>
 
   <!-- Login/Signup Modal -->
-  <!-- Login/Signup Modal -->
-<!-- LOGIN/SIGNUP SLIDER MODAL -->
-<!-- Login/Signup Modal -->
-<div id="authModal" class="auth-modal hidden">
-  <div class="auth-slider-container">
-    
-    <!-- Tabs -->
-    <div class="slider-tabs">
-      <button id="loginTab" class="active" onclick="switchTabSlide('login')">Login</button>
-      <button id="signupTab" onclick="switchTabSlide('signup')">Sign Up</button>
-    </div>
-
-    <!-- Sliding Forms -->
-    <div class="form-slider" id="formSlider">
-      <!-- LOGIN Panel -->
-      <div class="form-panel">
-        <h2>Login</h2>
-        <form id="loginForm">
-          <input type="email" placeholder="Email address" required>
-          <input type="password" placeholder="Password" required>
-          <button class="form-btn">Login</button>
-          <p class="switch-text">Don't have an account? <a href="#" onclick="switchTabSlide('signup')">Sign Up</a></p>
-        </form>
+  <div id="authModal" class="auth-modal hidden">
+    <div class="auth-slider-container">
+      <div class="slider-tabs">
+        <button id="loginTab" class="active" onclick="switchTabSlide('login')">Login</button>
+        <button id="signupTab" onclick="switchTabSlide('signup')">Sign Up</button>
       </div>
 
-      <!-- SIGNUP Panel -->
-      <div class="form-panel">
-        <h2>Sign Up</h2>
-        <form id="signupForm">
-          <input type="text" placeholder="Full Name" required>
-          <input type="email" placeholder="Email address" required>
-          <input type="password" placeholder="Password" required>
-          <button class="form-btn">Sign Up</button>
-          <p class="switch-text">Already have an account? <a href="#" onclick="switchTabSlide('login')">Login</a></p>
-        </form>
+      <div class="form-slider" id="formSlider">
+        <!-- LOGIN -->
+        <div class="form-panel">
+          <h2>Login</h2>
+          <form>
+            <input type="email" placeholder="Email address" required>
+            <input type="password" placeholder="Password" required>
+            <button class="form-btn">Login</button>
+            <p class="switch-text">Don't have an account? <a href="#" onclick="switchTabSlide('signup')">Sign Up</a></p>
+          </form>
+        </div>
+
+        <!-- SIGNUP -->
+        <div class="form-panel">
+          <h2>Sign Up</h2>
+          <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email address" required>
+            <input type="password" placeholder="Password" required>
+            <button class="form-btn">Sign Up</button>
+            <p class="switch-text">Already have an account? <a href="#" onclick="switchTabSlide('login')">Login</a></p>
+          </form>
+        </div>
       </div>
     </div>
-
   </div>
-</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
 
 
   <script src="script.js"></script>
